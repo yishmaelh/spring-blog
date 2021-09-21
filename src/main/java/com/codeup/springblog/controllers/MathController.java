@@ -26,4 +26,10 @@ public class MathController {
     public String multiply(@PathVariable int number, @PathVariable int number2) {
         return String.valueOf(number * number2);
     }
+
+    @GetMapping("/divide/{number}/and/{number2}")
+    @ResponseBody
+    public String divide(@PathVariable int number, @PathVariable int number2) {
+        return String.valueOf(number / number2);
+    }
 }
