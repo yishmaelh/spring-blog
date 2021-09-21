@@ -15,4 +15,9 @@ public class MathController {
         return String.valueOf(number1 + number2);
     }
 
+    @GetMapping("/subtract/{number}/and/{number2}")
+    @ResponseBody
+    public String subtract(@PathVariable int number, @PathVariable int number2) {
+        return String.valueOf(number - number2);
+    }
 }
