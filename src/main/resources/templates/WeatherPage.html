@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forecast for the Day</title>
+</head>
+<body>
+    <h1>The weather for today is as follows:</h1>
+<ul>
+    <li>Hot</li>
+    <li>Humid</li>
+    <li th:text="${temp}" ></li>
+</ul>
+</body>
+</html>
