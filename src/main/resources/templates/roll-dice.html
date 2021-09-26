@@ -6,13 +6,28 @@
 </head>
 <body>
 
-    <div>
-        <h1>What Will the Dice Land On?:</h1>
+<div>
+    <h1>What Will the Dice Land On?:</h1>
+</div>
+
+<div>
+    <div th:if="${userGuess == null}">
+        <a href="/roll-dice/1">1</a>
+        <a href="/roll-dice/2">2</a>
+        <a href="/roll-dice/3">3</a>
+        <a href="/roll-dice/4">4</a>
+        <a href="/roll-dice/5">5</a>
+        <a href="/roll-dice/6">6</a>
     </div>
+</div>
 
-    <div>
+<div th:if="${userGuess != null}">
+    <h3>Your guess was: <span th:text="${userGuess}"></span></h3>
+    <h3>Number rolled: <span th:text="${diceRoll}"></span></h3>
+    <h2 th:if="${isCorrect}">Correct! Solid Work.</h2>
+    <h2 th:if="${!isCorrect}">Not Quite. Give it another try.</h2>
+    <a href="/roll-dice">Try again!</a>
+</div>
 
-
-    </div>
 </body>
 </html>
