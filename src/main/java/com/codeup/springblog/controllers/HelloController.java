@@ -15,11 +15,11 @@ public class HelloController {
 //        return "Hello from Spring Boot.";
 //    }
 
-    @GetMapping("/helloWorld/{username}")
-    @ResponseBody
-    public String helloFromSpring(@PathVariable String username){
-        return "Hello, " + username + "!";
-    }
+//    @GetMapping("/helloWorld/{username}")
+//    @ResponseBody
+//    public String helloFromSpring(@PathVariable String username){
+//        return "Hello, " + username + "!";
+//    }
 
     @GetMapping("/weather")
     public String viewWeather( Model model){
