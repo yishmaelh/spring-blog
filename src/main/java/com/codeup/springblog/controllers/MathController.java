@@ -8,6 +8,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class MathController {
+
+    public MathController() {
+    }
+
     @GetMapping("add/{number1}/and/{number2}")
     @ResponseBody
 
