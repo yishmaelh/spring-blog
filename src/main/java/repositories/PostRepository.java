@@ -1,4 +1,4 @@
-package com.codeup.springblog;
+package repositories;
 
 import models.Post;
 import org.springframework.data.jpa.repository.JpaRepository;
