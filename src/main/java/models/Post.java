@@ -18,6 +18,10 @@ public class Post {
 
     public Post() {
     }
+    public long getId() {
+        return id;
+    }
+
 
     public Post(long id, String title, String body) {
         this.id = id;
