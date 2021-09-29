@@ -10,6 +10,9 @@ import java.util.Random;
 @Controller
 public class DiceRollController {
 
+    public DiceRollController() {
+    }
+
     @GetMapping("/roll-dice")
     public String rollDice(){
         return "roll-dice";
@@ -19,7 +22,7 @@ public class DiceRollController {
     public String rollGuess(@PathVariable int n, Model model){
 
         Random rand = new Random();
-        int randomNumber = rand.nextInt(6-1 + 1) + 1;
+        int randomNumber = rand.nextInt(6 - 1 + 1) + 1;
 
         model.addAttribute("diceRoll", randomNumber);
         model.addAttribute("userGuess", n);
