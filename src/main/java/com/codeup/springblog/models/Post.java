@@ -48,6 +48,7 @@ public class Post {
     }
 
     public void setTitle(String title) {
+
         this.title = title;
     }
 
@@ -60,10 +61,12 @@ public class Post {
     }
 
     public User getOwner() {
+
         return owner;
     }
 
-    public void setOwner(User owner) {
+    public void setOwner(User owner)
+    {
         this.owner = owner;
     }
 }
