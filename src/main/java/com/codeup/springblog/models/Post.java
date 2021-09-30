@@ -1,7 +1,5 @@
 package com.codeup.springblog.models;
 
-import com.codeup.springblog.User;
-
 import javax.persistence.*;
 
 @Entity
@@ -69,4 +67,5 @@ public class Post {
     {
         this.owner = owner;
     }
+
 }

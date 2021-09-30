@@ -1,6 +1,6 @@
 package com.codeup.springblog.controllers;
 
-import com.codeup.springblog.User;
+import com.codeup.springblog.models.User;
 import com.codeup.springblog.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
