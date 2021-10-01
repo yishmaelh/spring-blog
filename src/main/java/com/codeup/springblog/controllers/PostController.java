@@ -6,7 +6,7 @@ import com.codeup.springblog.repositories.UserRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import services.EmailService;
+//import services.EmailService;
 
 import java.util.List;
 
@@ -15,18 +15,19 @@ public class PostController {
 
     private final UserRepository userDao;
     private final PostRepository postDao;
-    private final EmailService emailService;
+//    private final EmailService emailService;
 
 
-    public PostController(PostRepository postDao, UserRepository userDao, EmailService emailService) {
+    public PostController(PostRepository postDao, UserRepository userDao) {
         this.postDao = postDao;
         this.userDao = userDao;
-        this.emailService = emailService;
+//        this.emailService = emailService;
     }
 
     @GetMapping("/posts")
     public String showPosts(Model model) {
         List<Post> allPosts = postDao.findAll();
+        System.out.println(allPosts.get(0).toString());
         model.addAttribute("posts", allPosts);
         return "post/index";
     }

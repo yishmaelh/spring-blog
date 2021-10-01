@@ -36,9 +36,8 @@ public class Post {
     }
 
 
-    public Post(String title, String body) {
-        this.title = title;
-        this.body = body;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -46,7 +45,6 @@ public class Post {
     }
 
     public void setTitle(String title) {
-
         this.title = title;
     }
 
@@ -59,13 +57,20 @@ public class Post {
     }
 
     public User getOwner() {
-
         return owner;
     }
 
-    public void setOwner(User owner)
-    {
+    public void setOwner(User owner) {
         this.owner = owner;
     }
 
+    @Override
+    public String toString() {
+        return "Post{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", body='" + body + '\'' +
+                ", owner=" + owner +
+                '}';
+    }
 }
