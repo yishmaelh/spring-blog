@@ -8,10 +8,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-public class UsersController {
+public class UserController {
 
     @Autowired
     private UserRepository userDao;
+
+    public UserController() {
+    }
 
 
     @GetMapping("/user/create")
